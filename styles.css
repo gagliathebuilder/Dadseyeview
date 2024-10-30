@@ -50,10 +50,11 @@ nav ul {
     display: flex;
     justify-content: center;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 10px 15px; /* Increased margin for better spacing on smaller devices */
 }
 
 nav ul li a {
@@ -76,8 +77,31 @@ nav ul li a:hover {
 }
 
 .hero-text h2 {
-    font-size: 3em;
+    font-size: 2.5em; /* Reduced for better mobile view */
     margin-bottom: 20px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 2em;
+    }
+
+    .featured-section {
+        flex-direction: column; /* Stack featured items for smaller screens */
+    }
+
+    .featured-item {
+        max-width: 100%;
+    }
+
+    .cta-button {
+        padding: 10px 20px; /* Reduced padding for better mobile display */
+    }
+
+    .footer-container ul {
+        flex-direction: column; /* Stack social links for mobile */
+    }
 }
 
 /* Featured Section */
@@ -173,6 +197,7 @@ nav ul li a:hover {
     justify-content: center;
     gap: 20px;
     margin: 0;
+    flex-wrap: wrap; /* Make footer links wrap to next line on smaller screens */
 }
 
 .footer-container ul li a {
